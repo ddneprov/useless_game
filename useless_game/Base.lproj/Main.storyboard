@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="useless_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="lCe-s2-XqB">
+                                <rect key="frame" x="300" y="52" width="94" height="29"/>
+                                <connections>
+                                    <action selector="StepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jxi-QK-34e"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последний счет: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cft-Gh-KKv">
+                                <rect key="frame" x="132.66666666666666" y="821" width="148.99999999999997" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4d-0A-Q9k">
+                                <rect key="frame" x="20" y="164" width="374" height="635"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="2s9-uc-ZvN">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="Exm-Sa-VdM"/>
+                                            <constraint firstAttribute="height" constant="128" id="fME-n1-Efi"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="I6G-6E-zHr" appends="YES" id="sh2-5e-9Io"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.52851100845479448" green="0.84857505292191782" blue="0.75943102839863019" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="2s9-uc-ZvN" firstAttribute="leading" secondItem="J4d-0A-Q9k" secondAttribute="leading" id="JPL-td-bH9"/>
+                                    <constraint firstItem="2s9-uc-ZvN" firstAttribute="top" secondItem="J4d-0A-Q9k" secondAttribute="top" id="fdg-Z6-TOe"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5o-Tn-e6i">
+                                <rect key="frame" x="176.66666666666666" y="126" width="61" height="30"/>
+                                <state key="normal" title="Погнали"/>
+                                <connections>
+                                    <action selector="ActionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VL4-Em-sIV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Время: 30 cек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8a-Kc-zaL">
+                                <rect key="frame" x="20" y="52" width="148" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cft-Gh-KKv" firstAttribute="top" secondItem="J4d-0A-Q9k" secondAttribute="bottom" constant="22" id="6ai-xm-CkN"/>
+                            <constraint firstItem="V8a-Kc-zaL" firstAttribute="centerY" secondItem="lCe-s2-XqB" secondAttribute="centerY" id="7gj-tI-WmA"/>
+                            <constraint firstItem="cft-Gh-KKv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="96l-K2-Ga4"/>
+                            <constraint firstItem="J4d-0A-Q9k" firstAttribute="top" secondItem="u5o-Tn-e6i" secondAttribute="bottom" constant="8" id="CtK-YS-LEZ"/>
+                            <constraint firstItem="J4d-0A-Q9k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Elc-hM-VtB"/>
+                            <constraint firstItem="lCe-s2-XqB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="V8a-Kc-zaL" secondAttribute="trailing" constant="8" symbolic="YES" id="Kks-vT-cu2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J4d-0A-Q9k" secondAttribute="trailing" constant="20" id="L10-h0-Rfx"/>
+                            <constraint firstItem="cft-Gh-KKv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R28-OH-8Q2"/>
+                            <constraint firstItem="V8a-Kc-zaL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TFx-kt-zsB"/>
+                            <constraint firstItem="lCe-s2-XqB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="TM2-bq-UIr"/>
+                            <constraint firstItem="V8a-Kc-zaL" firstAttribute="centerY" secondItem="lCe-s2-XqB" secondAttribute="centerY" id="YW8-7Q-qSA"/>
+                            <constraint firstItem="u5o-Tn-e6i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zku-nW-Qrv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lCe-s2-XqB" secondAttribute="trailing" constant="20" id="ehm-V7-xM3"/>
+                            <constraint firstItem="V8a-Kc-zaL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="g7h-Md-D3V"/>
+                            <constraint firstItem="cft-Gh-KKv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gta-7i-hjs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cft-Gh-KKv" secondAttribute="bottom" constant="20" id="iMI-44-kKw"/>
+                            <constraint firstItem="u5o-Tn-e6i" firstAttribute="top" secondItem="lCe-s2-XqB" secondAttribute="bottom" constant="45" id="pQ7-wY-BF0"/>
+                            <constraint firstItem="cft-Gh-KKv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rsq-6D-VLa"/>
+                            <constraint firstItem="cft-Gh-KKv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ydN-VG-rAO"/>
+                            <constraint firstItem="cft-Gh-KKv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zzO-uW-va4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="u5o-Tn-e6i" id="3YT-J3-YUz"/>
+                        <outlet property="gameFieldView" destination="J4d-0A-Q9k" id="Zyf-Rw-ELs"/>
+                        <outlet property="gameObj" destination="2s9-uc-ZvN" id="fNb-jo-8N9"/>
+                        <outlet property="scoreLabel" destination="cft-Gh-KKv" id="uGJ-ON-QO9"/>
+                        <outlet property="shapeX" destination="JPL-td-bH9" id="in3-oQ-bJZ"/>
+                        <outlet property="shapeY" destination="fdg-Z6-TOe" id="7Pr-8R-ykG"/>
+                        <outlet property="stepper" destination="lCe-s2-XqB" id="GWi-9J-W3A"/>
+                        <outlet property="timeLabel" destination="V8a-Kc-zaL" id="pvI-Ur-W9F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="I6G-6E-zHr">
+                    <connections>
+                        <action selector="objTapped:" destination="BYZ-38-t0r" id="Fvg-lL-xxx"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="me" width="128" height="128"/>
+    </resources>
+    <color key="tintColor" red="0.1960784314" green="0.69411764710000001" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+</document>
